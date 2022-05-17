@@ -1,0 +1,67 @@
+.fondoLogo {
+	background-color: rgb(255, 255, 255);
+}
+
+.logo {
+	display: block;
+	margin: auto;
+}
+
+.nav {
+	list-style-type: none;
+	margin-bottom: 10px;
+	padding: 0;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-areas: ". gridLista gridCart";
+	background-color: rgba(36, 0, 22, 0.459);
+	color: #FA7949ff;
+}
+
+.navLista {
+	display: flex;
+	justify-content: center;
+	grid-area: gridLista;
+}
+
+.navLista li {
+	font-family: 'Hammersmith One' sans-serif;
+	padding: 20px;
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+	color: #240016ff;
+}
+
+a {
+	text-decoration: none;
+	color: #240016ff;
+}
+
+a:hover{
+	color: #F3278Aff;
+}
+
+.nav-active {
+	font-weight: bold;
+}
+
+.linkCart {
+	display: flex;
+	padding: 16px;
+	margin-left: auto;
+	justify-content: right;
+	grid-area: gridCart;
+}
+
+.contenedorCarrito {
+	display: flex;
+	width: 30px;
+}
+
+.carrito {
+	display: flex;
+	order: inherit;
+	width: 35px;
+	height: 35px;
+}
