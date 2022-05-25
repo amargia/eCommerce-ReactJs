@@ -5,13 +5,13 @@ import { useCartContext } from "../../context/CartContext";
 import './ItemDetail.css';
 
 const ItemDetail = ({ item }) => {
-    const [showButton, setButton] = useState('addToCart');
+    const [qty, setQty] = useState('0');
 
     const {addItem} = useCartContext()
   
     const addHandler = (count) => {
       console.log('function on Add count is: ' + count)
-      setButton('goToCart')
+      setQty(count)
       addItem({...item, qty: count})
     }
 
@@ -27,11 +27,10 @@ const ItemDetail = ({ item }) => {
                     <div className='footer'>{ item.precio }</div>
                     <br />
                     <div>
-                    {
-                        showButton === 'addToCart' ? <ItemCount stock={item.stock} initial={1} onAdd={addHandler} />
-                        :
-                        <Link to="/cart"><button>Terminar mi compra</button></Link>
-                    }
+                    <ItemCount stock={item.stock} initial={1} onAdd={addHandler} />
+                    </div>
+                    <div>
+                    {qty>0 && <Link to="/cart"><button>Terminar mi compra</button></Link>}
                     </div>
                 </div>
             </div>

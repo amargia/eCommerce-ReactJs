@@ -53,7 +53,7 @@ const CartContextProvider = ({ children }) => {
     }
     
     const totalPrice = () => {
-        return cartItems.reduce((totalCost, { cost: itemCost }) => totalCost + parseFloat(itemCost), 0);
+        return cartItems.reduce((totalCost, prod ) => totalCost + (prod.precio*prod.qty), 0);
     };
 
     return(

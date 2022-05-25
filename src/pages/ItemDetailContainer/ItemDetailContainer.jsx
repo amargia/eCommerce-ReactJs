@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import ItemDetail from '../../components/ItemDetail/ItemDetail';
 import './ItemDetailContainer.css';
 import db from '../../services/firebase';
-import { doc, getDocs } from 'firebase/firestore';
+import { doc, getDoc } from 'firebase/firestore';
 
 const ItemDetailContainer = () => {
   const [item, setItem] = useState ([]);
@@ -11,8 +11,8 @@ const ItemDetailContainer = () => {
 
   const getItem = async(id) => {
     try {
-      const document = doc(db, "Items", id)
-      const response = await getDocs(document)
+      const document = doc(db, "items", id)
+      const response = await getDoc(document)
       const result = {id: response.id, ...response.data()}
       
       setItem(result)
