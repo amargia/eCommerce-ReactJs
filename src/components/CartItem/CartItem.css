@@ -1,0 +1,13 @@
+.header, .footerItem {
+    width: 100%;
+}
+
+.header, .footerItem {
+    height: 10%;
+}
+
+.footerItem {
+    font-size: 20px;
+    font-weight: medium;
+    padding-top: 10px;
+}

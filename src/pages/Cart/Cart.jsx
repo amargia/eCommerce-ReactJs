@@ -12,13 +12,13 @@ const Cart = () => {
         ))}
         {cartItems.length > 0 ? (
           <>
-            <h3>Total: ${totalPrice()}</h3>
+            <div className="header">Total: ${totalPrice()}</div>
             <button onClick={() => clearCart()}>Vaciar Carrito</button>
             <Link to='/'><button>Seguir comprando</button></Link>
             <Link to='/checkout'><button>Finalizar compra</button></Link>
           </>
         ) : (
-          <h3>El carrito está vacio</h3>
+          <div className="header">El carrito está vacio</div>
         )}
       </div>
     );

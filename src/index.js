@@ -10,7 +10,7 @@ ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <CartContextProvider>
-      <App />
+        <App />
       </CartContextProvider>
     </BrowserRouter>
   </React.StrictMode>,

@@ -12,7 +12,7 @@ import Checkout from './components/Checkout/Checkout';
 
 function App() {
   return (
-    <div className="App">
+    <>
       <NavBar />
       <Routes>
         <Route path='/' element={<ItemListContainer />} />
@@ -21,7 +21,7 @@ function App() {
         <Route path='/categoria/:categoriaId' element={<ItemListContainer />} />
         <Route path='/item/:id' element={<ItemDetailContainer />} />
       </Routes>
-    </div>
+    </>
   );
 }
 
