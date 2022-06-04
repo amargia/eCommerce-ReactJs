@@ -14,7 +14,7 @@ const CartItem = ({ item }) => {
           <Link to={'/item/' + id}><img className='imgProd' src={imgUrl} alt="Imagen del producto" /></Link>
         </div>
         <div className='footerItem'>Unidades: {qty}</div>
-        <div className='footerItem'>Precio unitario: {precio}</div>
+        <div className='footerItem'>Precio unitario: ${precio}</div>
         <button onClick={() => removeOneItem(id)}>Eliminar 1 item</button>
         <button onClick={() => removeItem(id)}>Eliminar todos</button>
       </div>

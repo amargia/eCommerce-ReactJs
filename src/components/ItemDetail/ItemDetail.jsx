@@ -24,7 +24,7 @@ const ItemDetail = ({ item }) => {
                     <h5>Descripción: </h5>
                     <p className='detalleProd'>{ item.detalle }</p>
                     <br />
-                    <div className='footer'>{ item.precio }</div>
+                    <div className='footer'>${ item.precio }</div>
                     <br />
                     <div>
                     <ItemCount stock={item.stock} initial={1} onAdd={addHandler} />
